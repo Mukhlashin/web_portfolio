@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Portfolio w3school</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background-image: url(/asset/asset_porto/bg_header.jpg);
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 1px;
+  border-top: 1px solid #dee2e6 !important;
+  text-align: left;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Kok kayak kenal?</h1>
+  <p><b>Benar sekali</b> ini adalah template website portfolio dari w3school</p>
+</div>
+
+<div class="navbar">
+  <a href="#" class="active">Home</a>
+  <a href="#education">Education</a>
+  <a href="#">Social Media</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <img src="/asset/asset_porto/img_avatar2.png" alt="foto profil" style="height: 300px;  border-radius: 50%;">
+    <p>Hi, Iam Abdullah Mukhlashin and iam proud to be a real living person</p>
+    <h3>You wanna know more about me?</h3>
+    <p>Try guessing my hobbies by looking at some photograph below :</p>
+    <div style="height:60px; display: inline-block;">
+      <img src="https://img2.goodfon.com/wallpaper/nbig/e/fc/arrows-archery-straw.jpg" alt="archery" style="max-width: 100%; height: auto;"><br>
+    </div><br>
+    <div style="height:60px; display: inline-block;">
+      <img src="https://p4.wallpaperbetter.com/wallpaper/331/75/711/computer-game-gamer-games-wallpaper-preview.jpg" alt="gaming" style="max-width: 100%; height: auto;"><br>
+    </div>
+  </div>
+  <div class="main">
+    <h2>BENAR SEKALI</h2>
+    <h5>Tertanggal 09 November 2021, Tebakan anda benar mengenai hobi saya</h5>
+    <div style="height:200px; display: inline-block;">
+    <img src="https://worldarchery.sport/sites/default/files/styles/full_desktop/public/2021-09/__43.jpg?itok=BUFsQsxw" alt="atlet panahan" style="max-width: 100%; height: auto;">
+    </div>
+    <p>Panahan</p>
+    <p>Panahan (Inggris:Archery) adalah suatu kegiatan menggunakan busur panah untuk menembakkan anak panah. Bukti-bukti menunjukkan bahwa sejarah panahan telah dimulai sejak 5.000 tahun yang lalu yang awalnya digunakan untuk berburu dan kemudian berkembang sebagai senjata dalam pertempuran dan kemudian sebagai olahraga ketepatan. Seseorang yang gemar atau merupakan ahli dalam memanah disebut juga sebagai pemanah. </p>
+    <br>
+    <div style="height:200px; display: inline-block;">
+      <img src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dmlkZW8lMjBnYW1lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="gaming pro player" style="max-width: 100%; height: auto;">
+    </div>
+    <p>Playstation</p>
+    <p>PlayStation (プレイステーション pureisutēshon, disingkat PS) merupakan jajaran merek konsol permainan video rumahan, serta pusat media, layanan daring, deretan pengontrol permainan, konsol genggam, dan ponsel pintar. Diproduksi oleh Sony Interactive Entertainment, yang merupakan divisi dari Sony, pertama kalinya dirilis sebagai konsol permainan video rumahan PlayStation di Jepang pada Desember 1994, dan di seluruh dunia pada tahun berikutnya.</p>
+    <br>
+    <h2 id="education">Education</h2>
+    <h5>about my education, here is some summary</h5>
+    <div>
+      <div style="display: inline-block;">
+        <div style="background-color: khaki; padding: 10px 20px 10px; border-radius: 10px 10px 0 0;">
+          <span>Sekolah Dasar IT Wihdatul Ummah</span>
+        </div>
+        <div>
+          <img src="https://foto2.data.kemdikbud.go.id/getImage/40307544/2.jpg" alt="foto sd" style="height:250px">
+        </div>
+      </div>
+      <div style="display: inline-block;">
+        <div style="background-color: khaki; padding: 10px 20px 10px; border-radius: 10px 10px 0 0;">
+          <span>Sekolah Menengah Pertama Wahdah Islamiyah</span>
+        </div>
+        <div>
+          <img src="https://wahdah.or.id/wp-content/uploads/2019/10/sekolah.jpg" alt="foto smp" style="height: 250px; width: 420px;">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div>
+      <div style="display: inline-block;">
+        <div style="background-color: khaki; padding: 10px 20px 10px; border-radius: 10px 10px 0 0;">
+          <span>Islamic Developer Network</span>
+        </div>
+        <div>
+          <img src="https://media-exp1.licdn.com/dms/image/C511BAQHn34bHWH6aZA/company-background_10000/0/1548461188189?e=2159024400&v=beta&t=MX-Os0ct6EFos-nOsjHoDcPk5tIZ2m03ivMsexseCac" alt="foto ideen" style="height:250px">
+        </div>
+      </div>
+      <div style="display: inline-block;">
+        <div style="background-color: khaki; padding: 10px 20px 10px; border-radius: 10px 10px 0 0;">
+          <span>IDN University</span>
+        </div>
+        <div>
+          <img src="https://avatars.githubusercontent.com/u/56038140?s=200&v=4" alt="foto smp" style="height: 250px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div style="max-width: 1140px; margin-left: 20px;">
+    <div style="padding: 1rem 0 1rem; !important;">
+      <label for="copyright" style="text-align: left !important;">
+        © 2021 Mukhlashin
+        </label>
+    </div>
+  </div>
+</div>
+</body>
+</html>

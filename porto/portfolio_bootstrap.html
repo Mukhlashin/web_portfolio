@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Poppins&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/efd40043b1.js" crossorigin="anonymous"></script>
+    <title>Portfolio bootstrap</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbarku {
+        overflow: hidden;
+        background-color: #333;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 10;
+        }
+
+        .navbarku a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.2s ease-out;
+        }
+
+        .navbarku a:hover {
+        background-color: #ddd;
+        transition: opacity 0.2s ease-in;
+        opacity: 1;
+        color: black;
+        }
+    </style>
+</head>
+<body>
+    <header class="container-fluid py-5" style="background: url(/asset/asset_porto/bg_header.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img class="img-fluid" style=" width: 30%; max-width: 100%; height: auto; border-radius: 50%;" src="/asset/asset_porto/img_avatar2.png" alt="foto maho">
+                    <h1 class="pt-5" style="color: white; font-size: 70px; font-family: 'Dongle', sans-serif;">西住 まほ</h1>
+                    <p style="color: white; font-size: 200%; font-family: 'Dongle', sans-serif;">As long as I'm the inheritor of the Nishizumi School, Miho will be free."</p>
+                    <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+                        <i class="bi bi-arrow-right-square-fill fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
+        <div class="offcanvas-header">
+            <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body px-0">
+            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-truncate">
+                        <i class="fs-5 bi-house"></i><span class="ms-1 d-none d-sm-inline">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
+                        <i class="fs-5 bi-speedometer2"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-truncate">
+                        <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Orders</span></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fs-5 bi-bootstrap"></i><span class="ms-1 d-none d-sm-inline">Bootstrap</span>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-truncate">
+                        <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span></a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-truncate">
+                        <i class="fs-5 bi-people"></i><span class="ms-1 d-none d-sm-inline">Customers</span> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="navbarku">
+        <a href="#header">Header</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#bio">Bio</a>
+        <a href="#">Social Media</a>
+    </div>
+
+    <div class="container my-3">
+        <h1 style="text-align: center;">Hobbies</h1>
+        <div class="row my-3">
+            <div class="mx-2 card" style="flex: 0 0 auto; width: 23.5%;">
+                <img class="img-fluid" src="/asset/asset_porto/archery.jpg" alt="" style="margin-top: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Archery</h5>
+                    <p class="card-text">Has become my hobbies since first time i shoot an arrow 7 years ago</p>
+                </div>
+            </div>
+            <div class="mx-2 card" style="flex: 0 0 auto; width: 23.5%;">
+                <img class="img-fluid" src="/asset/asset_porto/gamimg.jpg" alt="" style="margin-top: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Gaming</h5>
+                    <p class="card-text">Starts playing game since kindergarten, never leave any traces of enemy remainings</p>
+                </div>
+            </div>
+            <div class="mx-2 card" style="flex: 0 0 auto; width: 23.5%;">
+                <img class="img-fluid" src="/asset/asset_porto/puzzle.jpg" alt="" style="margin-top: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Solving Puzzle</h5>
+                    <p class="card-text">Iam the person that likes challenge so puzzle matches with my life</p>
+                </div>
+            </div>
+            <div class="mx-2 card" style="flex: 0 0 auto; width: 23.5%;">
+                <img class="img-fluid" src="/asset/asset_porto/uzaki.gif" alt="" style="margin-top: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Teasing People</h5>
+                    <p class="card-text">Dunno, becomes hobby since middle high school for no reason</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-3 px-5 text-center">
+        <h1 style="text-align: center;">Bio</h1>
+        <h6>Name : Abdullah Mukhlashin</h6>
+        <h6>Gender : Male</h6>
+        <h6>Age : 17</h6>
+        <h6>Nationality : Indonesia</h6>
+        <h6>PoB : Makassar, January 17th 2004</h6>
+        <h6>Address : Ruko Culdesac, 460, St. Abdullah Daeng Sirua</h6>
+        <h6>Job : Student</h6>
+    </div>
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-4 pb-0">
+          <section class="mb-4">
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/abdullah.mukhlashin.77/" role="button"
+              ><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i id="button" class="fab fa-google"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/amukhlash/" role="button"
+              ><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/abdullah-mukhlashin-6a163317a/" role="button"
+              ><i class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Mukhlashin" role="button"
+              ><i class="fab fa-github"></i></a>
+          </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2021 Copyright
+        </div>
+      </footer>
+</body>
+</html>

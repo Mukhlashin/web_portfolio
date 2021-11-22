@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>My Portfolio</title>
+    <style>
+            * {
+        box-sizing: border-box;
+        }
+
+        html{
+        scroll-behavior: smooth;
+        }
+
+        body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        }
+
+        .header {
+        text-align: center;
+        background-image: url(/asset/asset_porto/bg_header.jpg);
+        color: white;
+        }
+
+        .footer {
+        position: static;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        padding: 0.1px 20px 0.1px;
+        background-color: #333;
+        color: white;
+        }
+
+        .footer a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.2s ease-out;
+        }
+
+        .navbar {
+        overflow: hidden;
+        background-color: #333;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        }
+
+        .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.2s ease-out;
+        }
+
+        .navbar a:hover {
+        background-color: #ddd;
+        transition: opacity 0.2s ease-in;
+        opacity: 1;
+        color: black;
+        }
+
+        /* .navbar a.active {
+        background-color: #666;
+        color: white;
+        } */
+
+        .card-container {
+        padding: 50px; 
+        height: 100%; 
+        display: inline-flex;
+        }
+
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        margin: 0 20px 0;
+        border-radius: 10px;
+        flex: 1;
+        width: 20%;
+        }
+
+        .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .card-grid{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        margin: 0 20px 0;
+        border-radius: 10px;
+        flex: 1;
+        width: 20%;
+        }
+
+        .container {
+        padding: 2px 16px;
+        }
+
+        .header-grid {
+        width: 100%;
+        height: 100vh;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: "big-top big-top big-top small-top small-top" "small-middle small-middle big-middle big-middle big-middle" "big-bottom big-bottom big-bottom big-bottom big-bottom";
+        }
+
+        .block {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        border: 1px solid white;
+        background: black;
+        position: relative;
+        color: white;
+        opacity: 0.8;
+        transition: opacity 0.2s ease-out;
+        }
+
+        .block:hover {
+        transition: opacity 0.2s ease-in;
+        opacity: 1;
+        }
+
+        @media screen and (max-width: 600px) {
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        margin: 0 20px 30px;
+        border-radius: 10px;
+        width: 100%;
+        }
+
+        .card-container {
+        padding: 50px; 
+        height: 100%;
+        display: block;
+        margin: 0 0 0 -40px; 
+        }
+    }
+    </style>
+    <script src='https://kit.fontawesome.com/efd40043b1.js' crossorigin='anonymous'>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+    </script>
+</head>
+<body>
+    <header id="header" class="header">
+        <div style="opacity: 0.5; background-color: black; padding: 30px 0px 30px;">
+            <img src="/asset/asset_porto/img_avatar2.png" alt="foto profil" style="height: 300px;  border-radius: 50%; margin-right: auto; margin-left: auto; display: block; margin-top: 50px; ">
+            <h1 style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 10px ; text-align: center; font-family: 'Dongle', sans-serif; font-size: 400%;">西住 まほ</h1>
+            <p style="display: block; margin-left: auto; margin-right: auto; margin-top: 5px; text-align: center; font-family: 'Dongle', sans-serif; font-size: 200%;">"As long as I'm the inheritor of the Nishizumi School, Miho will be free."</p>
+        </div>
+    </header>
+    <div class="navbar">
+        <a href="#header">Header</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#bio">Bio</a>
+        <a href="#">Social Media</a>
+    </div>
+    <div id="hobbies" style="margin: 50px 40% 0">
+        <div style=" background-color: #333; padding: 1px 20px; width: auto; flex: 1; border-radius: 20px;">
+            <h1 style="text-align: center; color: white;">Hobbies</h1>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <img src="/asset/asset_porto/img_avatar3.gif" alt="Avatar" style="width:100%; border-radius: 10px 10px 0 0;">
+            <div class="container">
+                <h4><b>Benito Mussolini</b></h4>
+                <p>Benito Amilcare Andrea Mussolini adalah seorang politisi asal Italia dan pemimpin Partai Fasis Nasional. Ia adalah diktator Italia pada periode 1922-1943. Ia dipaksa mundur dari jabatan Perdana Menteri Italia pada 28 Juli 1943 setelah serangkaian kekalahan Italia di Afrika. Setelah ditangkap, ia diisolasi.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/asset/asset_porto/the-dirt-bike-kid-stroll.gif" alt="Avatar" style="width:100%; border-radius: 10px 10px 0 0;">
+            <div class="container">
+                <h4><b>Motocross</b></h4>
+                <p>Motocross adalah bentuk perlombaan atau kejuaraan balap motor yang digelar di sirkuit tanah. Olahraga ini berevolusi dari kompetisi uji coba sepeda motor di Inggris.[1][2] Nama motocross diambil dari penggabungan kata yang berasal dari Prancis untuk motorcycle, motocyclette, atau singkatnya moto, dan cross country, atau lintas alam. </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/asset/asset_porto/nichijou.gif" alt="Avatar" style="width:100%; border-radius: 10px 10px 0 0;">
+            <div class="container">
+                <h4><b>Misato Tachibana</b></h4>
+                <p>Just Misato Tachibana attacking Sasahara with an FN P90 after running into him at a vending machine. </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/asset/asset_porto/japan-battotai.gif" alt="Avatar" style="width:100%; border-radius: 10px 10px 0 0;">
+            <div class="container">
+                <h4><b>DRIP HIROHITO</b></h4>
+                <p><b>DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO DRIP HIROHITO </b></p>
+            </div>
+        </div>
+    </div>
+    <div id="bio" style="margin: 1px 45% 30px">
+        <div style=" background-color: #333; padding: 1px 20px; width: auto; flex: 1; border-radius: 20px;">
+            <h1 style="text-align: center; color: white;">Bio</h1>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <p>© 2021 Mukhlashin</p>
+            <p href="#"><i class="fa fa-facebook"></i>Facebook</p>
+            <p href="#"><i class="fa fa-youtube-play"></i>Youtube</p>
+            <p href="#"><i class="fa fa-instagram"></i>Instagram</p>
+            <p href="#"><i class='fab fa-discord'></i>Discord</p>
+        </div>
+    </div>
+</body>
+</html>
